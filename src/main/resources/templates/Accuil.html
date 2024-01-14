@@ -1,0 +1,114 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>LOGO</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><i class='bx bx-home' ></i><a href="/acceuil">Home</a></li>
+            <li><i class='bx bxl-product-hunt' ></i><a href="/produits/all">Produit</a></li>
+            <li><i class='bx bx-edit-alt' ></i></i><a href="/about">About</a></li>
+            <li><i class='bx bxs-contact' ></i><a href="#contact">Contact</a></li>
+            <li><a href="/admin">Admin</a></li>
+        </ul>
+    </nav>
+    <div >
+        <a href="" class="btn1">Login</a>
+        <a href="" class="btn2" >s'inscrire</a>
+    </div>
+</header>
+<div class="section">
+    <div class="section1">
+        <h1>Votre Magasin en un click!</h1>
+        <p class="sample">Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. Quae, voluptatem!</p>
+        <a href="" class="btn">Voir plus </a>
+    </div>
+    <div class="section2">
+        <img src="sample.png" alt="pc">
+    </div>
+</div>
+<div class="caregorie">
+    <h2>Nos Categories</h2>
+    <div class="content-categorie">
+        <div class="card-cat"  th:each="cat:${categories}" >
+            <h2 th:text="${cat.designation}"></h2>
+            <img src="sample.png" alt="">
+        </div>
+        
+    </div>
+
+</div>
+<div class="best-seller">
+    <h2>Best Seller</h2>
+    <div class="content-best">
+        <div class="card-best">
+            <h2>Asus VivaBooK</h2>
+            <img src="sample.png" alt="">
+            <a href="" class="btn">Details</a>
+        </div>
+        <div class="card-best">
+            <h2>Acer gamer GTX1050</h2>
+            <img src="sample.png" alt="">
+            <a href="" class="btn">Details </a>
+        </div>
+        <div class="card-best">
+            <h2>Casque RedDragon</h2>
+            <img src="sample.png" alt="">
+            <a href="" class="btn">Details </a>
+        </div>
+        <div class="card-best">
+            <h2>Clavier RGB</h2>
+            <img src="sample.png" alt="">
+            <a href="" class="btn">Details </a>
+        </div> <div class="card-best">
+            <h2>PC</h2>
+            <img src="sample.png" alt="">
+            <a href="" class="btn">Details </a>
+        </div>
+    </div>
+</div>
+<div class="contact">
+    <h2 id="contact">Contactez-Nous </h2>
+    <form href="/contact">
+        <div class="row">
+            <input type="text" placeholder="Entrez votre Nom">
+            <input type="text" placeholder="Entrez votre prénom">
+        </div>
+        <div class="row">
+            <input type="email" placeholder="Entrez votre Email">
+            <input type="tel" placeholder="Entrez votre Tel">
+        </div>
+        <div class="div row">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Exprimez vous..."></textarea>
+        </div>
+        <div class="row">
+            <button type="submit">Envoyer</button>
+        </div>
+       
+    </form>
+</div>
+<footer>
+    <div class="contact-footer">
+        <h1>LOGO</h1>
+        <ul>
+            <li><span><i class='bx bxl-facebook' ></i></span></li>
+            <li><span><i class='bx bxl-twitter' ></i></span></li>
+            <li><span><i class='bx bxl-instagram' ></i></span></li>
+        </ul>    
+    </div>
+    <div class="copy"> <i class='bx bx-copyright'></i> Ipsas 2024</div>
+</footer>
+</body>
+</html>

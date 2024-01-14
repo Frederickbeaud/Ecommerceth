@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,400&family=Poppins:wght@300&display=swap');
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   /* font-family: 'Montserrat', sans-serif;*/
+   scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(118, 118, 158) ;
+    color: white;
+}
+i{
+    margin: 5px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  rgb(118, 118, 158) ;;
+    color: white;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+ul li{
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 200;
+}
+ul a {
+    text-decoration: none;
+    color: white;
+    
+}
+ul li:hover{
+    color: yellow!important;
+    border-bottom: 2px solid yellow;
+}
+.btn1{
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
+   
+}
+.btn2{
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px solid turquoise;
+    cursor: pointer;
+    color: turquoise;
+    margin: 10px;
+}
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.section .section1{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    color: aliceblue;
+    border-right: 1px solid aliceblue;
+    padding: 10px;
+}
+.section1 h1{
+    font-size: 2rem;
+    margin: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.section1 p{
+    text-align: justify;
+    font-size: 1rem;
+}
+.section1 a{
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+    background-color: turquoise;
+    cursor: pointer;
+    color: white;
+    margin: 20px;
+}
+.section1 a:hover{
+    background-color: transparent;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    transform: scale(1);
+}
+
+.section .section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 150px;
+}
+.section2 img{
+    min-width: 200px;
+    
+
+}
+.caregorie{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: rgb(118, 118, 158) ;
+    padding: 40px;
+    height: 500px;
+}
+.caregorie h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 20px;
+}
+.content-categorie {
+justify-content: center;
+align-items: center;
+
+gap: 20px;
+
+display: flex;
+flex-wrap: wrap;
+
+}
+.card-cat{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 220px;
+    height: 220px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.content-categorie .card-cat h2{
+    text-align: center;
+    font-size: 1.5rem;
+   font-weight: 400;
+    
+}
+.content-categorie .card-cat img{
+    object-fit: cover;
+   width: 100px;
+   height: 100px;
+}
+.best-seller{
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: white;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 500px;
+}
+.best-seller h2{
+    text-align: center;
+    text-decoration: underline white 1px;
+
+    padding: 5px;
+    font-size: 1.5rem;
+    margin: 10px auto;
+    font-weight: 400;
+    background-color:rgb(118, 118, 158) ;
+    width: 180px;
+    border-radius: 5px;
+    height: 50px;
+    color: white;
+}
+.best-seller .content-best{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.best-seller
+ .card-best{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 220px;
+    height: 240px;
+    border: 2px solid white;
+    background-color:rgb(118, 118, 158) ;;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px 2px rgb(118, 118, 158) ;;
+    
+}
+.card-best h2{
+    padding: 0;
+    font-size: 1rem;
+    color:white!important;
+    text-decoration: none;
+    font-weight: 300;
+}
+.card-best img{
+    object-fit: cover;
+   width: 100px;
+   height: 100px;
+
+}
+.card-best .btn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    margin: 10px;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+.contact input,.contact textarea{
+    margin: 10px ;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+
+}
+.contact input:focus,.contact textarea:focus{
+    background-color: white;
+    color: black;
+}
+.contact input{
+    width: 200px;
+    height: 30px;
+}
+textarea{
+    width: 419px;
+    height: 100px;
+}
+.contact form button{
+    margin: 10px;
+    width: 419px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 8px;
+}
+.contact h2{
+    margin-top: 10px;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    height: 200px;
+}
+.contact-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.contact-footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.contact-footer li span{
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.copy i{
+   
+    color: white; 
+
+}
+
+.contact-footer.copy{
+    height: 70px;
+}
+/* page produit  */
+main{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    align-items: center;
+    
+    padding: 20px;
+    border: 1px solid white;
+
+}
+aside select{
+    margin-top: 2px;
+    width: 100%;
+    outline: none;
+    border: none;
+    
+    border-radius: 5px;
+}
+aside input{
+    margin-top: 2px;
+    width: 100%;
+    outline: none;
+    border: none;
+    
+    border-radius: 5px;
+    
+}
+aside .btn1{
+    margin-top: 2px;
+    width: 100%;
+    text-align: center;
+    color: rgb(118, 118, 158);
+}
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75%;
+}
+.content-p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.content-p .content-best{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.content-p .card-best{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 240px;
+    height: 260px;
+    border: 2px solid white;
+    background-color:rgb(118, 118, 158) ;;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px 2px rgb(118, 118, 158) ;
+}
+.btn3{
+    border: none;
+    outline: none;
+    font-size: 10px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    margin: 5px auto;
+}
+.priceb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.lignebtn{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.containerf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.containerf form{
+    justify-self: center;
+    width:  400px;
+    height: 400px;
+    margin: 15px auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    box-shadow: 5px 10px 5px 2px rgb(118, 118, 158) ;
+
+}
+.containerf form .title{
+    background-color: rgb(118, 118, 158);
+    margin-bottom: 10px;
+    color: white;
+    border:1px solid white ;
+    border-bottom: none;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+}
+.containerf form input{
+    width: 100%;
+    height: 50px;
+    margin: 10px 2px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding-left:  5px;
+}
+.saisi{
+    margin: 20px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrapS;
+}
+.containerf form input:focus{
+    background-color: rgb(118, 118, 158);
+    color: white;
+    padding-left:  5px;
+}
+.containerf form button{
+    width: 100%;
+    margin: 5px 2px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(118, 118, 158);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 15px;
+}
+.containerf form button:hover{
+    border: 1px solid rgb(118, 118, 158);
+    background-color: transparent;
+    color: rgb(118, 118, 158);
+
+}   
+.containerf form .register{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    color: black;
+}
+.containerf form div.register a{
+    color: rgb(118, 118, 158);
+    text-decoration: none;
+    
+}
