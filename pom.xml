@@ -73,6 +73,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>ecommerceth</finalName>
 	</build>
 
 </project>
