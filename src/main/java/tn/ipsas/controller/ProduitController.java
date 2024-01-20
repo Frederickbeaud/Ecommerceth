@@ -4,11 +4,13 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import tn.ipsas.model.Client;
 import tn.ipsas.model.Product;
 import tn.ipsas.repository.ClientReposirory;
 import tn.ipsas.repository.ProductRepository;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Controller // pour déclarer un contrôleur
@@ -19,6 +21,17 @@ public class ProduitController {
     public String index(Model model){
         Collection<Product> produits = prodReposirory.findAll();
         model.addAttribute("produits",produits);
+        return "produits";
+    }
+    @RequestMapping(value = "/addPanier")
+    public String panier(Model model, @RequestParam(name="id" , defaultValue ="0") Long id){
+        Product produit = prodReposirory.findById(id).orElseThrow();
+        Collection<Product> products = new ArrayList<>();
+        if(!products.contains(produit))
+            products.add(produit);
+        Collection<Product> produits = prodReposirory.findAll();
+        model.addAttribute("produits",produits);
+         model.addAttribute("panier",products);
         return "produits";
     }
 }

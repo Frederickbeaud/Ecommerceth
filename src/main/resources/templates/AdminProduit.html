@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <title>Liste des Produits</title>
+  <link rel= "stylesheet"
+        type ="text/css"
+        href= "../static/bootstrap.min.css"
+        th:href="@{bootstrap.min.css}"
+  />
+  <link rel="stylesheet" href="../static/styles.css">
+  <link rel= "stylesheet"
+  type ="text/css"
+  href= "../static/styles.css"
+  th:href="@{/styles.css}"
+  />
+  <link rel="stylesheet" href="../static/mon_style.css">
+    <link rel= "stylesheet"
+    type ="text/css"
+    href= "../static/mon_style.css"
+    th:href="@{/mon_style.css}"
+    />
+  <title>Document</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <nav>
+            <ul>
+              
+            </ul>
+        </nav>
+        <div class="d-flex1" >
+            <span>ADMIN</span>
+            <a  class="btn1" href="/login">Logout</a>
+            
+        </div>
+    </header>
+<h3 class="text-center">Liste des produits</h3>
+<div class="d-flex justify-content-center align-items-center align-self-center ">
+    
+</div>
+
+<div class="container">
+  <form th:action="@{produitsAdmin}" method="get" >
+    <label>Mot Clé (désignation):</label>
+    <input type="text" name ="motCle" th:value="${motCle}"/>
+    <button class ="btn btn-primary"> Chercher </button>
+  </form>
+</div>
+<div class ="container spacer">
+    <a href="/form"  class="btn btn-primary"> Ajouter</a>
+  <table class ="table table-striped">
+    <thead>
+    <tr>
+
+
+      <th>ID</th><th>Désignation</th><th>Prix</th><th>Quantité</th><th>Date
+      Achat</th><th>Action</th>
+    </thead>
+    <tbody>
+    <tr th:each="p:${pageProduits}" class="text-dark">
+      <td  >[[${p.id}]]</td>
+      <td th:text="${p.libelle}" class="text-dark"></td>
+      <td th:text="${p.prix}" class="text-dark"></td>
+      <td th:text="${p.quantite}"class="text-dark" ></td>
+      <td th:text="${p.dateAchat}" class="text-dark" ></td>
+      <td> <a th:href="@{edit(id=${p.id})}" class="text-dark" >Editer</a></td>
+      <td> <a onclick ="return confirm('Confirmez vous la suppression de ce produit?')"
+              th:href="@{delete(id=${p.id},page=${pageCourante},motCle=${motCle})}" class="text-dark" >Supprimer</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class ="container">
+  <ul class ="nav nav-pills" >
+    <li th:each ="p:${pages}" th:class="${p==pageCourante}?active:''">
+      <a th:text ="${p}" th:href ="@{index(page =${p})}"></a>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

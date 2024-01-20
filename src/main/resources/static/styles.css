@@ -242,8 +242,8 @@ flex-wrap: wrap;
 }
 .card-best img{
     object-fit: cover;
-   width: 100px;
-   height: 100px;
+   width: 70px;
+   height: 70px;
 
 }
 .card-best .btn{
@@ -256,7 +256,7 @@ flex-wrap: wrap;
     border: 2px solid white;
     cursor: pointer;
     color: white;
-    margin: 10px;
+
     }
     .contact{
         display: flex;
@@ -455,8 +455,8 @@ aside .btn1{
 }
 .lignebtn{
     display: flex;
-    justify-content: space-between;
-    gap: 100px;
+    justify-content: center;
+
     align-items: center;
     flex-wrap: wrap;
 }
@@ -540,8 +540,20 @@ aside .btn1{
     gap: 2px;
     color: black;
 }
+.d-flex1{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.text-dark1{
+    color: black;
+    text-decoration: none;
+}
 .containerf form div.register a{
     color: rgb(118, 118, 158);
     text-decoration: none;
     
+}
+table td,table a{
+    color: black;
 }

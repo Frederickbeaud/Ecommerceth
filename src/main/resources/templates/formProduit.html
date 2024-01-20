@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fiche Produit</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/bootstrap.min.css"
+      th:href="@{bootstrap.min.css}"
+    />
+    <link rel="stylesheet" href="../static/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/styles.css"
+      th:href="@{/styles.css}"
+    />
+    <link rel="stylesheet" href="../static/mon_style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/mon_style.css"
+      th:href="@{/mon_style.css}"
+    />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>LOGO</h1>
+      </div>
+      <nav>
+        <ul></ul>
+      </nav>
+      <div class="d-flex1">
+        <span>ADMIN</span>
+        <a class="btn1" href="/login">Logout</a>
+      </div>
+    </header>
+    <div class="col-md-6 col-sm-6 col-xs-12 spacer col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">Saisie d'un produit</div>
+        <div class="panel-body">
+          <form th:action="@{save}" method="post" th:object="${produit}">
+            <div class="form-group">
+              <label class="control-label">Désignation</label>
+              <input class="form-control" type="text" th:field="*{libelle}" />
+              <span class="red" th:errors="*{libelle}"></span>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Description</label>
+              <input
+                class="form-control"
+                type="text"
+                th:field="*{description}"
+              />
+              <span class="red" th:errors="*{description}"></span>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Prix</label>
+              <input class="form-control" type="text" th:field="*{prix}" />
+              <span class="red" th:errors="*{prix}"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">Quantité</label>
+              <input class="form-control" type="text" th:field="*{quantite}" />
+              <span class="red" th:errors="*{quantite}"></span>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Image Url</label>
+              <input class="form-control" type="text" th:field="*{imageUrl}" />
+              <span class="red" th:errors="*{imageUrl}"></span>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Date Achat</label>
+              <input class="form-control" type="date" th:field="*{dateAchat}" />
+              <span class="red" th:errors="*{dateAchat}"></span>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Catégorie</label>
+              <select class="form-control" th:field="*{categorie}">
+                <option
+                  th:each="c:${categories}"
+                  th:value="${c.id}"
+                  th:text="${c.designation}"
+                />
+              </select>
+              <span class="red" th:errors="*{categorie}"></span>
+            </div>
+            <div>
+              <button class="btn btn-primary" type="submit">Enregistrer</button>
+            </div>
+          </form>
+        </div>
+        <div class="panel-footer">---- Gestion de stock ---</div>
+      </div>
+    </div>
+  </body>
+</html>

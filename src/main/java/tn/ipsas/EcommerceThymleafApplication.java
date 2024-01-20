@@ -6,11 +6,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import tn.ipsas.model.Categorie;
 import tn.ipsas.model.Client;
+import tn.ipsas.model.Product;
 import tn.ipsas.repository.CategorieRepository;
 import tn.ipsas.repository.ClientReposirory;
 import tn.ipsas.repository.ProductRepository;
 
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Date;
 
 @SpringBootApplication
 public class EcommerceThymleafApplication {
@@ -33,12 +36,12 @@ public class EcommerceThymleafApplication {
 				System.out.println(client.toString());
 			}
 
-			categorieRepository.save(new Categorie(null,"Ordinateur",new ArrayList<>()));
-			categorieRepository.save(new Categorie(null,"Telephone",new ArrayList<>()));
-			categorieRepository.save(new Categorie(null,"Gaming",new ArrayList<>()));
-			for (Categorie cat : categorieRepository.findAll())
+
+			Categorie cat = categorieRepository.findById(1L).orElseThrow();
+			productRepository.save(new Product(null,"Samsung","tres bien" ,2220.0, new Date(),5, cat,"https://www.tunisianet.com.tn/195507-large/ecran-samsung-235-led-full-hd.jpg"));
+			for (Product  prod : productRepository.findAll())
 			{
-				System.out.println("cat créée");
+				System.out.println("prod créée");
 			}
 		};
 	}

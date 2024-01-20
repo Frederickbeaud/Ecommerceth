@@ -22,13 +22,14 @@
     <nav>
         <ul>
             <li><i class='bx bx-home' ></i><a href="/">Home</a></li>
-            <li><i class='bx bxl-product-hunt' ></i><a href="/produit">Produit</a></li>
+            <li><i class='bx bxl-product-hunt' ></i><a href="/produits/all">Produit</a></li>
             <li><i class='bx bx-edit-alt' ></i></i><a href="/about">About</a></li>
             <li><i class='bx bxs-contact' ></i><a href="#contact">Contact</a></li>
-            <li><a href="/admin">Admin</a></li>
+            <li><a href="/produitsAdmin">Admin</a></li>
         </ul>
     </nav>
     <div >
+        
         <a href="" class="btn1">Login</a>
         <a href="" class="btn2" >s'inscrire</a>
     </div>
@@ -52,78 +53,34 @@
         <div class="content-p">
             <h2>Nos Produits</h2>
             <div class="content-best">
-                <div class="card-best">
-                    <h2>Asus VivaBooK</h2>
-                    <img src="../sample.png" alt="">
+                <div class="card-best"  th:each="p:${produits}">
+                    <h2 th:text="${p.libelle}"></h2>
+                    <img th:src="@{${p.imageUrl}}" alt="">
                     <div class="priceb">
                         <div class="lignebtn">
-                            <span>TND200</span>
+                            <span th:text="${p.prix}+TND"></span>
                             <span><a href="" class="btn3">Details </a></span>
                         </div>
                        <div>
-                        <span class="btn3"> Add To Card</span>
+                        <a class="btn3" th:href="@{addPanier(id=${p.id})}"> Add To Card</a>
                        </div>
                        
                     </div>
                 </div>
-                <div class="card-best">
-                    <h2>Acer gamer GTX1050</h2>
-                    <img src="../sample.png" alt="">
-                    <div class="priceb">
-                        <div class="lignebtn">
-                            <span>TND200</span>
-                            <span><a href="" class="btn3">Details </a></span>
-                        </div>
-                       <div>
-                        <span class="btn3"> Add To Card</span>
-                       </div>
-                    </div>
-                </div>
-                <div class="card-best">
-                    <h2>Casque RedDragon</h2>
-                    <img src="../sample.png" alt="">
-                    <div class="priceb">
-                        <div class="lignebtn">
-                            <span>TND200</span>
-                            <span><a href="" class="btn3">Details </a></span>
-                        </div>
-                       <div>
-                        <span class="btn3"> Add To Card</span>
-                       </div>
-                    </div>
+
+
 
                 </div>
-                <div class="card-best">
-                    <h2>Clavier RGB</h2>
-                    <img src="../sample.png" alt="">
-                    <div class="priceb">
-                        <div class="lignebtn">
-                            <span>TND200</span>
-                            <span><a href="" class="btn3">Details </a></span>
-                        </div>
-                       <div>
-                        <span class="btn3"> Add To Card</span>
-                       </div>
-                    </div>
-                </div> 
-                <div class="card-best">
-                <h2>PC</h2>
-                <img src="../sample.png" alt="">
-                <div class="priceb">
-                    <div class="lignebtn">
-                        <span>TND200</span>
-                        <span><a href="" class="btn3">Details </a></span>
-                    </div>
-                   <div>
-                    <span class="btn3"> Add To Card</span>
-                   </div>
-                </div>
+
+
                
                 </div>
             </div>
         </div> 
     </section>
 </main>
-
+<script>
+    
+</script>
 </body>
 </html>
