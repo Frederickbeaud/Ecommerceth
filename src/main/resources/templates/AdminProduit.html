@@ -78,7 +78,7 @@
 <div class ="container">
   <ul class ="nav nav-pills" >
     <li th:each ="p:${pages}" th:class="${p==pageCourante}?active:''">
-      <a th:text ="${p}" th:href ="@{index(page =${p})}"></a>
+      <a th:text ="${p}" th:href ="@{index(page=${p})}"></a>
     </li>
   </ul>
 </div>

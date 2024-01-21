@@ -35,7 +35,7 @@ public class EcommerceThymleafApplication {
 			{
 				System.out.println(client.toString());
 			}
-
+ 			categorieRepository.save(new Categorie(null,"Telephone",null));
 
 			Categorie cat = categorieRepository.findById(1L).orElseThrow();
 			productRepository.save(new Product(null,"Samsung","tres bien" ,2220.0, new Date(),5, cat,"https://www.tunisianet.com.tn/195507-large/ecran-samsung-235-led-full-hd.jpg"));
